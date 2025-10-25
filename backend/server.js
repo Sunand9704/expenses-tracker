@@ -10,9 +10,10 @@ const port = 8000;
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(CORS({
-  origin: 
+  origin: [
     "https://expenses-tracker-frontends.onrender.com",
     "http://localhost:8080",
+    ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
